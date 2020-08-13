@@ -1,0 +1,10 @@
+.card {
+  margin: 1rem auto;
+  max-width: 24rem;
+  width: 100%;
+}
+
+.name-typo {
+  font-size: 2rem !important;
+  margin: 0 !important;
+}
