@@ -18,17 +18,17 @@ import { createBrowserHistory as createHistory } from 'history';
 const history = createHistory();
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Router history={history}>
-      <Switch>
-        <Route exact path="/list" component={List} />
-        <Route exact path="/add-person" component={AddPerson} />
-        <Route path="/detail/:id" component={Detail} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/" component={Welcome} />
-      </Switch>
-    </Router>
-  </React.StrictMode>,
+  // <React.StrictMode>
+  <Router history={history}>
+    <Switch>
+      <Route exact path="/list" component={List} />
+      <Route exact path="/add-person" component={AddPerson} />
+      <Route path="/detail/:id" component={Detail} />
+      <Route exact path="/about" component={About} />
+      <Route exact path="/" component={Welcome} />
+    </Switch>
+  </Router>,
+  // </React.StrictMode>,
   document.getElementById('root')
 );
 

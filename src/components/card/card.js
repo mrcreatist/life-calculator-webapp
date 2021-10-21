@@ -14,7 +14,7 @@ export default function LifeCard() {
         <React.Fragment>
             {
                 jsonData && jsonData.map(i => (
-                    <Card className="card" variant="outlined">
+                    <Card className="card" variant="outlined" key={i.id}>
                         <CardContent>
                             <Typography color="textSecondary" gutterBottom className="name-typo">{i.name}</Typography>
                         </CardContent>

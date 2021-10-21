@@ -14,7 +14,7 @@ export default function Detail(props) {
 
     const [id, setId] = useState(0);
 
-    useEffect((props) => {
+    useEffect((prop) => {
         setId(props.match.params.id);
     }, []);
 
@@ -37,7 +37,7 @@ export default function Detail(props) {
             let weeks = differenceInWeeks(curDate, date);
 
             display = (
-                <div>
+                <span>
                     <Card className="card" variant="outlined">
                         <CardContent>
                             <Typography color="textSecondary" gutterBottom className="name-typo">{year} year(s)</Typography>
@@ -58,13 +58,13 @@ export default function Detail(props) {
                             <Typography color="textSecondary" gutterBottom className="name-typo">{days} day(s)</Typography>
                         </CardContent>
                     </Card>
-                </div>
+                </span>
             );
         }
 
         return (
             <React.Fragment>
-                <p>{display}</p>
+                {display}
             </React.Fragment>
         )
     }
