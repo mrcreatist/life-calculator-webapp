@@ -14,9 +14,7 @@ export default function Detail(props) {
 
     const [id, setId] = useState(0);
 
-    useEffect((prop) => {
-        setId(props.match.params.id);
-    }, []);
+    useEffect(() => setId(props.match.params.id), []);
 
     function getUser() {
         let data = localStorage.getItem('data') ? JSON.parse(localStorage.getItem('data')) : [];
